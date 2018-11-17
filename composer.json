@@ -1,0 +1,34 @@
+{
+    "name": "ferencbalogh/billingohu",
+    "description": "Billingo API Provider for Laravel 5+",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Balogh Ferenc",
+            "email": "baloghferenclevente@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "FerencBalogh\\Billingohu\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "5.*",
+        "guzzlehttp/guzzle": "6.*",
+        "firebase/php-jwt": "^3.0",
+        "symfony/options-resolver": "^3.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FerencBalogh\\Billingohu\\ServiceProvider"
+            ],
+            "aliases": {
+                "Billingo": "FerencBalogh\\Billingohu\\Facade"
+            }
+        }
+    }
+}
