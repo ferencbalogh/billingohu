@@ -1,35 +1,14 @@
-# Billingo API Provider for Laravel
+# Billingo.hu Wrapper
 
-This package is a Billingo API service provider and facade for Laravel 5.1+.
-
-
+This package is a Billingo API service provider and facade for Laravel 5+.
 
 ## Installing
 
 You have to use Composer to install the library
 
 ```
-composer require trisztan/billingo-api-laravel
+composer require ferencbalogh/billingohu
 ```
-
-Find the `providers` array in the `config/app.php` file and add the Billingo Service Provider:
-
-```php
-'providers' => [
-  // ...
-  Billingo\API\Laravel\BillingoServiceProvider::class
-];
-```
-
-Now find the `aliases` array in the same config file and add the Billingo Facade class:
-
-```php
-'aliases' => [
-  // ...
-  'Billingo' => Billingo\API\Laravel\BillingoFacade::class
-];
-```
-
 
 
 ## Config
@@ -51,10 +30,6 @@ BILLINGO_PUBLIC_KEY=
 BILLINGO_PRIVATE_KEY=
 ```
 
-
-
-
-
 ## Usage
 
 ### Get resource
@@ -66,8 +41,6 @@ $clients = Billingo::get('clients');
 // Return one client
 $client = Billingo::get('clients/123456789');
 ```
-
-
 
 ### Save resource
 
@@ -88,16 +61,12 @@ $clientData = [
 Billingo::post('clients', $clientData);
 ```
 
-
-
 ### Update resource
 
 ```php
 // save client
 Billingo::put('clients/123456789', $newData);
 ```
-
-
 
 ### Delete resource
 
